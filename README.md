@@ -13,13 +13,8 @@ The Flask App folder contains the code for a flask app that I am currently build
 
 If you were to run all the code from scratch having deleted the data files, the order of code to be run would be:
 
-PL_website_webscraper.py
-transfermarkt_scraper.py
-whoscored_scraper.py
-starting_xi_scraper.py
-analysis of scraped data.py
-model.py
-Betting outcomes for last season.py
+PL_website_webscraper.py,   transfermarkt_scraper.py,  whoscored_scraper.py,  starting_xi_scraper.py,  analysis of scraped data.py,  model.py,  Betting outcomes for last season.py
+
 The initial data is scraped by PL_website_webscraper.py, which creates a table where each row corresponds to a single match, and has columns for the season, date, home team, away team, and score. The result of this scraping is added to by whoscored_scraper.py, which adds advanced team metrics. Transfermarkt_scraper.py and starting_xi_scraper.py run independently of the aforementioned scrapers, and produce a json containing transfer values of players over the years and an excel file of starting xis in each game respectively. The results of who_scored_scraper.py, transfermarkt_scraper.py, and starting_xi_scraper.py are combined to create a final dataset via analysis of scraped data.py, which also adds additional form-based features that can be inferred from the scraped features.
 
 Finally, this data is used to train and test a neural network in model.py (trained on data from 2012/13 - 2021/22 seasons and tested on the 2022/23 season), which currently contains 6 layers and uses a softmax activation function to output the probabilities of a home win, an away win, and a draw for each game from the testing season. These probabilities can be used either to make definitive predictions (highest probability -> predicted outcome), and can also be combined with betting odds to determine whether betting on a home win, away win, draw (or not betting at all) has the highest expected value and is therefore the best course of action. This is done in Betting outcomes for last season.py.
@@ -30,6 +25,5 @@ for a more detail, check out comments in individual files. However, given the na
 
 Lastly, here is a key for some of the abbreviations used in the data:
 
-GFPG - Goals For Per Game 
-GAPG - Goals Against Per Game
+GFPG - Goals For Per Game,   GAPG - Goals Against Per Game
 
