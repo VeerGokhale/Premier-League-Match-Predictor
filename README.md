@@ -1,4 +1,7 @@
 # Premier-League-Match-Predictor
+
+NOTE: This code was written in August 2023. As of September 2024, it no longer works, due to changes in the layouts of the scraped websites
+
 This is a model that predicts the outcomes of Premier League matches using a deep neural network, and a dataset containing data from the last 11 years of football (scraped from various websites). When trained on the 2012/13 - 2021/22 seasons, and then tested on the most recent season 2022/23, the model predicted outcomes (Home Win, Away Win, Draw) with 57% accuracy. When betting odds were added to create a betting-recommendation system, the model's recommendations returned 17% (annualized), far more than the SnP 500 in the same timeframe.
 
 Contained within the repository are 4 subfolders:
